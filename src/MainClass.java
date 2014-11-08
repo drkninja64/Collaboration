@@ -31,7 +31,7 @@ public class MainClass {
      * @param Message the message to be displayed
      */
     private static void opMsg(String Message){
-        System.out.println("Your message was:");
+        System.out.print("Your message was: ");
         System.out.println(Message);
     }
 
