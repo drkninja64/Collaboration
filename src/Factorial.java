@@ -2,7 +2,8 @@ import Utility.References;
 
 public class Factorial {
 
-    public Factorial(){
+    public Factorial()
+    {
         System.out.print("\nEnter an integer: ");
         int Int = References.read.nextInt();
         System.out.println("Factorial = " + factorial(Int));
@@ -10,18 +11,20 @@ public class Factorial {
 
     /**
      * @param Integer is the number whose factorial is to be calculated
-     * It's recursive if factorial is out of range or infinite
+     * @return Factorial if Integer is between 0 and 170 inclusive, Infinity otherwise
      */
     private static double factorial(int Integer)
     {
-        double Fact = 1;
+        double Factorial = 1;
         if (Integer < 0 || Integer > 171)   // factorial of a negative number is infinite
-            return factorial(171);  // factorial of Integer >= 171 is out of range, i.e. Infinity
+        {
+            return factorial(171);          // factorial of Integer > 170 is out of range, i.e. Infinity
+        }
         else
         {
             for (int i = 2; i <= Integer; ++i)
-                Fact *= i;
-            return Fact;
+                Factorial *= i;
+            return Factorial;
         }
     }
 }
