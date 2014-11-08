@@ -6,10 +6,9 @@ Testing with Russell
 Messages
 ========
 
-* Comment on comments
+* No new message
 
 Changelog
 =========
 
-* Used separate class for factorial and message programs
-* Changed variable name from Fact to Factorial
+* init() is no longer recursive, returns true if error encountered
