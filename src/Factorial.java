@@ -16,6 +16,8 @@ public class Factorial {
         }
         catch(Exception e){
             System.out.println("Please enter integers only");
+            References.read.nextLine();
+            init();
         }
     }
 
