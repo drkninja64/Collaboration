@@ -4,9 +4,19 @@ public class Factorial {
 
     public Factorial()
     {
+        init();
+    }
+
+    private static void init(){
         System.out.print("\nEnter an integer: ");
-        int Int = References.read.nextInt();
-        System.out.println("Factorial = " + factorial(Int));
+        int num;
+        try{
+            num = References.read.nextInt();
+            System.out.println("Factorial = " + factorial(num));
+        }
+        catch(Exception e){
+            System.out.println("Please enter integers only");
+        }
     }
 
     /**
