@@ -6,9 +6,10 @@ Testing with Russell
 Messages
 ========
 
-* No new message
+* tell me what you think of it
 
 Changelog
 =========
 
-* init() is no longer recursive, returns true if error encountered
+* changed init() to constructor
+* constructor can handle exception by itself

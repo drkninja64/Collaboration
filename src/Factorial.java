@@ -1,27 +1,23 @@
 import Utility.References;
 
-public class Factorial {
-
+public class Factorial
+{
 	public Factorial()
 	{
-		while(init())
-            System.out.println("Please enter integers only");
-	}
-
-	private static boolean init(){
-		System.out.print("\nEnter an integer: ");
+		boolean Redo;
 		int num;
-		try
-		{
-			num = References.read.nextInt();
-			System.out.println("Factorial = " + factorial(num));
-			return false;
-		}
-		catch(Exception e)
-		{
-			References.read.nextLine();
-			return true;
-		}
+		do {
+			try {
+				System.out.print("\nEnter an integer: ");
+				num = References.read.nextInt();
+				System.out.println("Factorial = " + factorial(num));
+				Redo = false;
+			} catch (Exception e) {
+				System.out.println("Please enter integers only");
+				References.read.nextLine();
+				Redo = true;
+			}
+		} while (Redo);
 	}
 
 	/**
@@ -32,14 +28,9 @@ public class Factorial {
 	{
 		double Factorial = 1;
 		if (Integer < 0 || Integer > 171)   // factorial of a negative number is infinite
-		{
 			return factorial(171);          // factorial of Integer > 170 is out of range, i.e. Infinity
-		}
-		else
-		{
-			for (int i = 2; i <= Integer; ++i)
-				Factorial *= i;
-			return Factorial;
-		}
+		for (int i = 2; i <= Integer; ++i)
+			Factorial *= i;
+		return Factorial;
 	}
 }
