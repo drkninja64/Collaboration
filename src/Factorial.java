@@ -1,4 +1,4 @@
-import Utility.References;
+import Utility.NumberText;
 
 public class Factorial
 {
@@ -6,7 +6,7 @@ public class Factorial
 	{
 		int num;
 		System.out.print("\nEnter an integer: ");
-		num = References.readInt();
+		num = NumberText.readInt();
 		System.out.println("Factorial = " + factorial(num));
 	}
 
