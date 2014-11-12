@@ -4,20 +4,10 @@ public class Factorial
 {
 	public Factorial()
 	{
-		boolean Redo;
 		int num;
-		do {
-			try {
-				System.out.print("\nEnter an integer: ");
-				num = References.read.nextInt();
-				System.out.println("Factorial = " + factorial(num));
-				Redo = false;
-			} catch (Exception e) {
-				System.out.println("Please enter integers only");
-				References.read.nextLine();
-				Redo = true;
-			}
-		} while (Redo);
+		System.out.print("\nEnter an integer: ");
+		num = References.readInt();
+		System.out.println("Factorial = " + factorial(num));
 	}
 
 	/**
